@@ -6,7 +6,7 @@ console.log(result);
 let book = {
     name: 'js',
     pages: 300,
-    genre: 'detective',
+    genre: 'detective'
 };
 
 //3. Створити об'єкт book з наступними полями  - назва, кількість сторінок, жанр, автори
@@ -14,7 +14,7 @@ let book1 = {
     name: 'js',
     pages: 300,
     genre: 'detective',
-    autors: 'other',
+    autors: 'other'
 };
 //4. Створити маис об'єктів book з наступними полями  - назва, кількість сторінок, жанр, автори. Вивести кожну книгу як окремий об'єкт
 let book2 = [
