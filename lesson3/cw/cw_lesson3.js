@@ -20,7 +20,7 @@ for (let i = 0; i < arr.length; i++) {
 
 let a=0;
 while (a <= arr.length-1) {
-    if (arr[a] % 2 !==0) {
+    if ([a] % 2 !==0) {
         console.log(arr[a])
     }
     a++
@@ -29,7 +29,7 @@ while (a <= arr.length-1) {
 //4. перебрати циклом for та вивести  числа тільки з непарним індексом
 
 for (let i = 0; i < arr.length; i++) {
-    if (arr[i] % 2 !==0) {
+    if ([i] % 2 !==0) {
         console.log(arr[i])
     }
 }

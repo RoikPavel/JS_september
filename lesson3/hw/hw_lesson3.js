@@ -23,8 +23,12 @@ console.log(arrayMix[i])
 //-- Створити пустий масив. Наповнити його будь-якими значеннями звертаючись до конкретного індексу. Вивести в консоль
 
 let user = [];
-for (let i=0; i<=20; i++){
-    console.log(`user${i}`)
+user[0] = 'true';
+user[1] = 'abc';
+user[3] = 20;
+user[4] = 'false';
+for (let i=0; i<user.length; i++){
+    console.log(`${user[i]}`)
 }
 
 //- За допомогою циклу for і document.write() вивести 10 блоків div c довільним текстом всередині
