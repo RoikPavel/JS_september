@@ -79,8 +79,8 @@ arrayMix(array1);
 function usersID(arrayName) {
     for (let i = 0; i < arrayName.length; i++) {
         let arrayNameElement = arrayName[i];
-        for (let ElementKey in arrayNameElement) {
-            document.write(`<div>${ElementKey}, ${arrayNameElement[ElementKey]}</div>`)
+        for (let elementKey in arrayNameElement) {
+            document.write(`<div>${elementKey}, ${arrayNameElement[elementKey]}</div>`)
         }
     }
 }
