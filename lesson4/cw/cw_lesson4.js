@@ -2,7 +2,7 @@
 function minNum(a, b, c) {
     if (a < b && a < c){console.log(a)}else if (b < a && b < c){console.log(b)}else{console.log(c)}
 }
-minNum(12, 33, 44)
+minNum(67, 33, 25)
 
 //- створити функцію яка приймає три числа та виводить найбільше. (Без Math.max!)
 function maxNum(a, b, c) {
