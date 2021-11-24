@@ -67,6 +67,7 @@ let middleArr = (arr) => {
         sum = sum + arr[i];
         middle = sum / (i+1);
     }
+
     return middle;
 };
 console.log(middleArr([10,20,60]));
@@ -101,8 +102,8 @@ console.log(randomArr());
 //- створити функцію яка заповнює масив рандомними числами в діапазоні від 0 до limit. limit - аргумент, який характеризує кінцеве значення діапазону.
 let randomArrLim = (limit) => {
     let newArr = [];
-    for (let i = 0; i < limit; i++) {
-        newArr.push(Math.round(Math.random()*100))
+    for (let i = 0; i < newArr.length; i++) {
+        newArr.push(Math.round(Math.random() * limit));
     }
     return newArr;
 }

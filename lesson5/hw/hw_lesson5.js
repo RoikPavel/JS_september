@@ -47,6 +47,7 @@ listNum('menu', 2);
 //- створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
 let arr2 = [1, 'string', 2===4, 4<6, 5];
 let arrMix = (arr) => {
+    document.write(`<ul>`)
     for (let arrElement of arr) {
         document.write(`<li>${arrElement}</li>`)
     }
