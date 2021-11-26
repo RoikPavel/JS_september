@@ -22,7 +22,6 @@ function random(size) {
   let newRandomArr = [];
   for (let i = 0; i < size-1; i++) {
     newRandomArr[i] = Math.round(Math.random()*100)
-    newRandomArr.push(newRandomArr[i])
   }
   return newRandomArr;
 }
@@ -62,10 +61,8 @@ randomMap(10);
 //sortNums('descending') // [21,11,3]
 let nums = [11,21,3];
 let sortNums = (nums, direction) => {
-  for (let i = 0; i < nums.length; i++) {
     if (direction === 'ascending'){return nums.sort((a, b) => a-b)}else if (direction === 'descending') {
       return nums.sort((a, b) => b-a)}
-  }
 };
 console.log(sortNums(nums, 'descending'));
 
