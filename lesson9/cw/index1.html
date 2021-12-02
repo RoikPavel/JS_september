@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    .time{
+      display: flex;
+      justify-content: space-around;
+    }
+    .title{
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+<script>
+//  - Є масив
+  let coursesArray = [
+    {
+      title: 'JavaScript Complex',
+      monthDuration: 5,
+      hourDuration: 909,
+      modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'node.js']
+    },
+    {
+      title: 'Java Complex',
+      monthDuration: 6,
+      hourDuration: 909,
+      modules: ['html',
+        'css',
+        'js',
+        'mysql',
+        'mongodb',
+        'angular',
+        'aws',
+        'docker',
+        'git',
+        'java core',
+        'java advanced']
+    },
+    {
+      title: 'Python Complex',
+      monthDuration: 6,
+      hourDuration: 909,
+      modules: ['html',
+        'css',
+        'js',
+        'mysql',
+        'mongodb',
+        'angular',
+        'aws',
+        'docker',
+        'python core',
+        'python advanced']
+    },
+    {
+      title: 'QA Complex',
+      monthDuration: 4,
+      hourDuration: 909,
+      modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'git', 'QA/QC']
+    },
+    {
+      title: 'FullStack',
+      monthDuration: 7,
+      hourDuration: 909,
+      modules: ['html',
+        'css',
+        'js',
+        'mysql',
+        'mongodb',
+        'react',
+        'angular',
+        'aws',
+        'docker',
+        'git',
+        'node.js',
+        'python',
+        'java']
+    },
+    {
+      title: 'Frontend',
+      monthDuration: 4,
+      hourDuration: 909,
+      modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'sass']
+    }
+  ];
+//  Створити для кожного елементу масиву свій блок, блок розділити блоками, в яких будуть зберігатись значення окремих властивостей, для властивості modules зробити список з елементами
+//  Приклад структири знаходиться у файлі example.png
+for (let item of coursesArray) {
+  let divItem = document.createElement('div');
+let divH2 = document.createElement('h2');
+  divH2.innerText = item.title;
+  divH2.setAttribute('class', 'title')
+let divCourseTime = document.createElement('div');
+divCourseTime.setAttribute('class', 'time')
+let monthDuration = document.createElement('div');
+monthDuration.innerText = (`monthDuration ${item.monthDuration}`);
+  let hourDuration = document.createElement('div');
+  hourDuration.innerText = (`hourDuration ${item.hourDuration}`);
+
+ let ul = document.createElement('ul');
+    for (let element of item.modules) {
+        let li = document.createElement('li');
+        li.innerText = element;
+        ul.appendChild(li);
+    }
+  document.body.appendChild(divItem);
+  divItem.append(divH2, divCourseTime, ul);
+  divCourseTime.append(monthDuration, hourDuration);
+}
+
+</script>
+</body>
+</html>
