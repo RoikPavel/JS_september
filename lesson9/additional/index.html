@@ -242,8 +242,7 @@
             }
         ];
     //Створити під кожен елемент окремий блок. В цьому блоці, під кожну властивість, та властивості внутрішніх об'єктів створити свої окремі блок.
-
- for (let user of usersList) {
+ /*for (let user of usersList) {
      let userDiv = document.createElement('div');
      let id = document.createElement('div');
      id.innerText = user.id;
@@ -287,7 +286,28 @@
      addressGeo.append(addressGeoLat, addressGeoLng);
      company.append(companyName, companyCatchPhrase, companyBs);
 
+ }*/
+
+ for (let user of usersList) {
+     let userDiv = document.createElement('div');
+
+     for (let key1 in user) {
+         if (typeof user[key1] !=='object'){
+             let a = document.createElement('div');
+             a.innerText = user[key1];
+             userDiv.append(a);
+         }else if (typeof user[key1] ==='object') {
+             for (let key2 in user[key1]) {
+                 let b = document.createElement('div');
+                 b.innerText = user[key1][key2];
+                 userDiv.append(b);
+             }
+             }
+     }
+document.body.appendChild(userDiv);
  }
+
+
 
 </script>
 </body>
