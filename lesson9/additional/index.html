@@ -288,25 +288,77 @@
 
  }*/
 
- for (let user of usersList) {
+/*for (let user of usersList) {
      let userDiv = document.createElement('div');
 
      for (let key1 in user) {
+
          if (typeof user[key1] !=='object'){
              let a = document.createElement('div');
              a.innerText = user[key1];
              userDiv.append(a);
-         }else if (typeof user[key1] ==='object') {
+
+         }else {
              for (let key2 in user[key1]) {
-                 let b = document.createElement('div');
-                 b.innerText = user[key1][key2];
-                 userDiv.append(b);
+                 if (typeof key2 !=='object'){
+                     let a2 = document.createElement('div');
+                     a2.innerText = user[key1][key2];
+                     userDiv.append(a2);
+                 }else if (typeof key2 ==='object'){
+                     for (let key3 in user.address) {
+                         let a3 = document.createElement('div');
+                         a3.innerText = user.address[key3];
+                         console.log(a3);
+                     }
+                 }
+             }
+         }
+
+
+            if (typeof user[key1] ==='object') {
+             for (let key2 in user[key1]) {
+                 if (typeof key2 !== 'object'){
+                 let a2 = document.createElement('div');
+                 a2.innerText = user[key1][key2];
+                 userDiv.append(a2)}
+                 else if (typeof key2 === 'object'){
+
+                 }
              }
              }
      }
 document.body.appendChild(userDiv);
- }
+ }*/
 
+ for (let user of usersList) {
+     let div = document.createElement('div');
+
+     for (let object in user) {
+         let div1 = document.createElement('div');
+         div1.innerText = user[object];
+
+         if (typeof user[object] === 'object') {
+             for (let keyObject in user[object]) {
+                 let div2 = document.createElement('div');
+                 div2.innerText = user[object][keyObject];
+
+
+                 if (typeof user[object][keyObject] === 'object') {
+                     for (let key in user[object][keyObject]) {
+                         let div3 = document.createElement('div');
+                         div3.innerText = user[object][keyObject][key];
+
+
+                         div2.appendChild(div3);
+                     }
+                 }
+                 div.appendChild(div2);
+             }
+         }
+         div.appendChild(div1);
+     }
+     document.body.appendChild(div);
+ }
 
 
 </script>
