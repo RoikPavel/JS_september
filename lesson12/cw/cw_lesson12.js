@@ -31,7 +31,7 @@ fetch('https://jsonplaceholder.typicode.com/posts').then(response=>response.json
             }
                 body.style.display = 'block';
             };
-            let hr = document.createElement('hr')
+            let hr = document.createElement('hr');
             div.append(userId, id, title, btn, body, hr);
         }
         document.body.appendChild(div);
