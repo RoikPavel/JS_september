@@ -17,7 +17,7 @@ fetch('https://jsonplaceholder.typicode.com/posts').then(response=>response.json
             let body = document.createElement('p');
             body.innerText = post.body;
             let btn = document.createElement('button');
-            btn.innerText = 'show post';
+            btn.innerText = 'show comment';
             btn.onclick = function (){{
                 fetch('https://jsonplaceholder.typicode.com/comments')
                     .then(response => response.json())
