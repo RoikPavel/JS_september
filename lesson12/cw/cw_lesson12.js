@@ -5,11 +5,9 @@ https://jsonplaceholder.typicode.com/posts
 
 fetch('https://jsonplaceholder.typicode.com/posts').then(response=>response.json())
     .then(posts=>{
-
         let div = document.createElement('div');
         for (let post of posts) {
             console.log(post);
-
         let userId = document.createElement('div');
         userId.innerText = `userID: ${post.userId}`;
             let id = document.createElement('div');
@@ -20,12 +18,20 @@ fetch('https://jsonplaceholder.typicode.com/posts').then(response=>response.json
             body.innerText = post.body;
             let btn = document.createElement('button');
             btn.innerText = 'show post';
-            btn.onclick = function (){
+            btn.onclick = function (){{
+                fetch('https://jsonplaceholder.typicode.com/comments')
+                    .then(response => response.json())
+                    .then(comments => {
+                        for (const comment of comments) {
+                            if (post.id === comment.id) {
+                                body.innerText = comment.body;
+                            }
+                        }
+                    })
+            }
                 body.style.display = 'block';
             };
             let hr = document.createElement('hr')
-
-
             div.append(userId, id, title, btn, body, hr);
         }
         document.body.appendChild(div);
