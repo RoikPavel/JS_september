@@ -55,7 +55,7 @@ function dinner(done) {
     }else reject('щось пішло не так!!!')},2000)})}
 
 
-wakeUp(true)
+wakeUp(false)
     .then(value =>{return exercise('value')})
     .then(value =>{return toWash('value')})
     .then(value =>{return breakfast('value')})
@@ -63,4 +63,5 @@ wakeUp(true)
     .then(value =>{return goToWork('value')})
     .then(value =>{return worked('value')})
     .then(value =>{return dinner('value')})
+    .catch(e=>console.error(e))
 
