@@ -1,4 +1,4 @@
-let wakeUp = function(done, callback {
+let wakeUp = function(done, callback) {
     setTimeout(()=>{ if (done) {
         console.log('проснувся))');
         callback();
